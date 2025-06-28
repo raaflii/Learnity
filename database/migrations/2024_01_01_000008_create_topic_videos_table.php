@@ -17,7 +17,6 @@ class CreateTopicVideosTable extends Migration
             $table->string('video_path', 500);
             $table->integer('duration_seconds')->default(0);
             $table->integer('order_index');
-            $table->boolean('is_free')->default(false);
             $table->timestamps();
         });
     }
