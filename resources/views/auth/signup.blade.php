@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    @vite('resources/css/app.css')
+    <link rel="stylesheet" href="{{ secure_asset('build/assets/app-BBvuUIXV.css') }}">
 </head>
 
 <body class="bg-gray-100 dark:bg-gray-900 min-h-screen flex items-center justify-center">
