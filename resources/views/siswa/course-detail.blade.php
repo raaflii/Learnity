@@ -1,4 +1,4 @@
-<x-layout>
+<x-siswa.layout>
     <x-slot:title>{{ $course->title }}</x-slot:title>
 
     <div class="space-y-6">
@@ -389,7 +389,7 @@
             </div>
         </div>
     </div>
-</x-layout>
+</x-siswa.layout>
 
 <script src="https://app.sandbox.midtrans.com/snap/snap.js" data-client-key="{{ config('midtrans.client_key') }}">
 </script>

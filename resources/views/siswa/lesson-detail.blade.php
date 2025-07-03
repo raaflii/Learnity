@@ -1,4 +1,4 @@
-<x-layout>
+<x-siswa.layout>
     <x-slot:title>{{ $lesson->title }} - {{ $course->title }}</x-slot:title>
 
     <div class="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -293,4 +293,4 @@
             </aside>
         </div>
     </div>
-</x-layout>
+</x-siswa.layout>

@@ -1,4 +1,4 @@
-<x-layout>
+<x-siswa.layout>
     <x-slot:title>My Courses</x-slot:title>
 
     <div class="space-y-6">
@@ -155,4 +155,4 @@
             </div>
         @endif
     </div>
-</x-layout>
+</x-siswa.layout>

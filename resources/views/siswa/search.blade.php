@@ -1,4 +1,4 @@
-<x-layout>
+<x-siswa.layout>
     <x-slot:title>Courses</x-slot:title>
 
     <div class="space-y-6" x-data="{
@@ -96,4 +96,4 @@
         <!-- Modal -->
         <x-course-modal />
     </div>
-</x-layout>
+</x-siswa.layout>

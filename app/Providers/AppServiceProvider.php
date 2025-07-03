@@ -22,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Blade::component('siswa.components.stats-card', 'stats-card');
-        Blade::component('siswa.components.layout', 'layout');
+        Blade::component('siswa.components.layout', 'siswa.layout');
         Blade::component('siswa.components.calendar-modal', 'calendar-modal');
         Blade::component('siswa.components.course-card', 'siswa.course-card');
         Blade::component('siswa.components.course-modal', 'course-modal');

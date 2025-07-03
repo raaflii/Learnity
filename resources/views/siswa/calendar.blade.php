@@ -1,4 +1,4 @@
-<x-layout>
+<x-siswa.layout>
     <x-slot:title>{{ $title }}</x-slot:title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <div class="space-y-6" x-data="{
@@ -566,4 +566,4 @@
             </div>
         </div>
     </div>
-</x-layout>
+</x-siswa.layout>

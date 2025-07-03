@@ -1,4 +1,4 @@
-<x-layout>
+<x-siswa.layout>
     <x-slot:title>{{ $title }}</x-slot:title>
     <div class="space-y-6">
         <!-- Welcome Section -->
@@ -245,4 +245,4 @@
         </div>
 
     </div>
-</x-layout>
+</x-siswa.layout>
