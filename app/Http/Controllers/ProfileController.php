@@ -86,7 +86,6 @@ class ProfileController extends Controller
             $avatarName = 'avatars/' . Str::uuid() . '.' . $avatarFile->getClientOriginalExtension();
             $avatarFile->storeAs('', $avatarName, 'public');
             
-
             $user->update(['avatar' => $avatarName]);
         }
         
