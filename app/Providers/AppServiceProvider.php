@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
         Blade::component('siswa.components.calendar-modal', 'calendar-modal');
         Blade::component('siswa.components.course-card', 'siswa.course-card');
         Blade::component('siswa.components.course-modal', 'course-modal');
-        Blade::component('siswa.components.header', 'header');
+        Blade::component('siswa.components.header', 'siswa.header');
         Blade::component('siswa.components.sidebar-content', 'sidebar-content');
         Blade::component('siswa.components.sidebar', 'sidebar');
         Blade::component('siswa.components.my-course-card', 'my-course-card');

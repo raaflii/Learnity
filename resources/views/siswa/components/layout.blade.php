@@ -24,7 +24,7 @@
 <x-sidebar></x-sidebar>
 
 @if(isset($title))
-  <x-header>{{ $title }}</x-header>
+  <x-siswa.header>{{ $title }}</x-siswa.header>
 @endif
 
 <!-- Success/Error Messages -->
