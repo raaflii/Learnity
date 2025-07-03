@@ -49,14 +49,26 @@ class AuthController extends Controller
     }
 
     public function register(Request $request)
-    {
-        $validated = $request->validate([
-            'first_name' => 'required|max:100',
-            'last_name' => 'required|max:100',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:6|confirmed',
-        ]);
+{
+    $validated = $request->validate([
+        'first_name' => 'required|max:100',
+        'last_name' => 'required|max:100',
+        'email' => 'required|email|unique:users,email',
+        'password' => 'required|min:8|confirmed',
+    ], [
+        'first_name.required' => 'First name is required.',
+        'first_name.max' => 'First name must not exceed 100 characters.',
+        'last_name.required' => 'Last name is required.',
+        'last_name.max' => 'Last name must not exceed 100 characters.',
+        'email.required' => 'Email is required.',
+        'email.email' => 'Please enter a valid email address.',
+        'email.unique' => 'This email is already registered.',
+        'password.required' => 'Password is required.',
+        'password.min' => 'Password must be at least 8 characters.',
+        'password.confirmed' => 'Password confirmation does not match.',
+    ]);
 
+    try {
         $user = User::create([
             'first_name' => $validated['first_name'],
             'last_name' => $validated['last_name'],
@@ -69,7 +81,10 @@ class AuthController extends Controller
         Auth::login($user);
 
         return redirect()->route('dashboard');
+    } catch (\Exception $e) {
+        return back()->withErrors(['general' => 'Registration failed. Please try again.'])->withInput();
     }
+}
 
     public function logout(Request $request)
     {
