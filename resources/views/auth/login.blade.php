@@ -19,17 +19,35 @@
     {{-- Right side: Login Form --}}
     <div class="w-1/2 p-10">
       <h2 class="text-2xl font-semibold text-gray-700 dark:text-gray-200 mb-6">Login</h2>
+      
+      {{-- Error Messages --}}
+      @if ($errors->any())
+        <div class="mb-4 p-3 bg-red-100 dark:bg-red-900 border border-red-300 dark:border-red-700 rounded-md">
+          <ul class="text-sm text-red-700 dark:text-red-300">
+            @foreach ($errors->all() as $error)
+              <li>{{ $error }}</li>
+            @endforeach
+          </ul>
+        </div>
+      @endif
+
       <form action="/login" method="POST" class="space-y-4">
         @csrf
         <div>
           <label class="block text-gray-600 dark:text-gray-300 mb-1">Email</label>
-          <input type="email" name="email" required
-                 class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+          <input type="email" name="email" value="{{ old('email') }}" required
+                 class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white @error('email') border-red-500 @enderror">
+          @error('email')
+            <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+          @enderror
         </div>
         <div>
           <label class="block text-gray-600 dark:text-gray-300 mb-1">Password</label>
           <input type="password" name="password" required
-                 class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+                 class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-primary dark:bg-gray-700 dark:border-gray-600 dark:text-white @error('password') border-red-500 @enderror">
+          @error('password')
+            <p class="text-red-500 text-xs mt-1">{{ $message }}</p>
+          @enderror
         </div>
         <div class="flex justify-between items-center">
           <label class="flex items-center text-gray-600 dark:text-gray-300">
