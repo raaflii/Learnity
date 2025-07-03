@@ -38,7 +38,7 @@ class AdminUserController extends Controller
     {
         $validated = $request->validate([
             'email' => 'required|email|unique:users',
-            'password' => 'required|min:6',
+            'password' => 'required|min:8',
             'first_name' => 'required',
             'last_name' => 'required',
             'role_id' => 'required|exists:roles,id',
