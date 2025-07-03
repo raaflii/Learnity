@@ -413,7 +413,7 @@
             });
 
             $.ajax({
-                url: '{{ route('payment.create') }}',
+                url: '{{ secure_url(route('payment.create', [], false)) }}',
                 method: 'POST',
                 data: {
                     course_id: courseId
