@@ -10,25 +10,25 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('build/assets/app-BBvuUIXV.css') }}">
+    <link rel="stylesheet" href="{{ secure_asset('build/assets/app-BBvuUIXV.css') }}">
     <title>Learnity</title>
 </head>
 
 <body class="bg-white dark:bg-gray-900 min-h-screen transition-colors duration-300">
 
     <x-header></x-header>
-    
+
     <div id="home"><x-hero-section></x-hero-section></div>
-    
+
 
     <x-stat></x-stat>
 
     <div id="course"><x-featured-course></x-featured-course></div>
-    
+
     <x-quality-section></x-quality-section>
 
     <div id="review"><x-testimonial-section></x-testimonial-section></div>
-    
+
     <x-cta-section></x-cta-section>
 
     <div id="about"><x-footer></x-footer></div>
